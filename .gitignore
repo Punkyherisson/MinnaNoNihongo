@@ -1,0 +1,18 @@
+# Fichiers temporaires Excel
+~$*.xlsx
+
+# Fichiers temporaires Word
+~$*.docx
+
+# Fichiers système Windows
+Thumbs.db
+desktop.ini
+
+# Sauvegardes éditeurs
+*.bak
+*.tmp
+
+# Environnement Python
+__pycache__/
+*.pyc
+.env
