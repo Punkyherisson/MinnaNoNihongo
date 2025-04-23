@@ -1,8 +1,9 @@
 @echo off
+chcp 65001 >nul
 setlocal enabledelayedexpansion
 
-REM Récupérer le dernier tag Git commençant par v
-for /f "delims=" %%i in ('git tag --sort=-v:refname ^| findstr "^v"') do (
+REM Récupérer le dernier tag Git commençant par v suivi d’un chiffre (ex: v0.14)
+for /f "delims=" %%i in ('git tag --sort=-v:refname ^| findstr /r "^v[0-9]"') do (
     if not defined last_tag (
         set last_tag=%%i
     )
